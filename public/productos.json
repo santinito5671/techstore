@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mouse Gamer RGB",
+    "precio": 29999,
+    "descripcion": "Mouse inalámbrico con 6 botones programables, sensor óptico de 16000 DPI y retroiluminación RGB personalizable. Batería de hasta 70 horas.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=MOUSE+RGB",
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico TKL",
+    "precio": 54999,
+    "descripcion": "Teclado compacto tenkeyless con switches Cherry MX Red, retroiluminación por tecla y construcción en aluminio cepillado.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=TECLADO+TKL",
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor 24\" IPS 144Hz",
+    "precio": 189999,
+    "descripcion": "Panel IPS Full HD 1920x1080 con tiempo de respuesta de 1ms, compatible con FreeSync Premium y cobertura sRGB del 99%.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=MONITOR+144HZ",
+    "categoria": "Monitores"
+  },
+  {
+    "id": 4,
+    "nombre": "Auriculares 7.1 Surround",
+    "precio": 39999,
+    "descripcion": "Sonido envolvente virtual 7.1 con drivers de 50mm, micrófono retráctil con cancelación de ruido y almohadillas de espuma viscoelástica.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=AURICULARES",
+    "categoria": "Audio"
+  },
+  {
+    "id": 5,
+    "nombre": "Webcam Full HD 1080p",
+    "precio": 24999,
+    "descripcion": "Cámara web con autoenfoque rápido, campo visual de 90°, micrófono dual integrado con reducción de ruido y compatibilidad universal USB-A.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=WEBCAM+1080P",
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 6,
+    "nombre": "SSD NVMe 1TB",
+    "precio": 69999,
+    "descripcion": "Unidad de estado sólido M.2 NVMe PCIe 4.0 con velocidades de lectura de hasta 7000 MB/s y escritura de 6500 MB/s. Garantía 5 años.",
+    "imagen": "https://placehold.co/400x300/0a0a0a/00ff88?text=SSD+NVME",
+    "categoria": "Almacenamiento"
+  }
+]
