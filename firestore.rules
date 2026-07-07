@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /productos/{productoId} {
+      // Cualquiera puede leer el catálogo (vista pública)
+      allow read: if true;
+      // Solo un usuario logueado (admin) puede crear/editar/borrar productos
+      allow write: if request.auth != null;
+    }
+  }
+}

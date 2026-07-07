@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
+import { getProductoPorId } from '../services/productosService';
 
 function ProductoDetalle() {
   const { id } = useParams();
@@ -10,13 +11,10 @@ function ProductoDetalle() {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    fetch('/productos.json')
-      .then((res) => res.json())
-      .then((data) => {
-        const encontrado = data.find((p) => p.id === Number(id));
-        setProducto(encontrado);
-        setLoading(false);
-      });
+    setLoading(true);
+    getProductoPorId(id)
+      .then(setProducto)
+      .finally(() => setLoading(false));
   }, [id]);
 
   function handleAddToCart() {

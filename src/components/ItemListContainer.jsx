@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 import Item from './Item';
+import { getProductos } from '../services/productosService';
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/productos.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setProductos(data);
-        setLoading(false);
-      });
+    getProductos()
+      .then(setProductos)
+      .finally(() => setLoading(false));
   }, []);
 
   if (loading) return (
@@ -33,15 +31,22 @@ function ItemListContainer() {
         }}>Catálogo</p>
         <h2 style={{ fontSize: '2rem', fontWeight: 800 }}>Todos los productos</h2>
       </div>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-        gap: '1.5rem',
-      }}>
-        {productos.map((p) => (
-          <Item key={p.id} {...p} />
-        ))}
-      </div>
+
+      {productos.length === 0 ? (
+        <p style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+          Todavía no hay productos cargados.
+        </p>
+      ) : (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+          gap: '1.5rem',
+        }}>
+          {productos.map((p) => (
+            <Item key={p.id} {...p} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
