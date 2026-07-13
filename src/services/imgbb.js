@@ -1,6 +1,5 @@
-const IMGBB_API_KEY = import.meta.env.VITE_IMGBB_API_KEY;
+const IMGBB_API_KEY = "cabfb4b2a8dd34d917e60c64719fe9c3";
 
-// Sube un archivo de imagen a imgbb y devuelve la URL pública
 export async function subirImagen(archivo) {
   const formData = new FormData();
   formData.append('image', archivo);

@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Las credenciales se leen de variables de entorno (archivo .env, no se sube al repo)
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCEMVuP1i-Sh4mbSi5CLIc4nnFMnI2-OH8",
+  authDomain: "techstore-3bc71.firebaseapp.com",
+  projectId: "techstore-3bc71",
+  storageBucket: "techstore-3bc71.firebasestorage.app",
+  messagingSenderId: "842115800067",
+  appId: "1:842115800067:web:4ebae122bf3cccab180236",
 };
 
 const app = initializeApp(firebaseConfig);
